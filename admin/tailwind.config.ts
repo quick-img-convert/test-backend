@@ -6,17 +6,17 @@ const config: Config = {
     extend: {
       colors: {
         // Engine-room dark theme, shared with the public site.
-        ink: "#06070b", // page background
-        panel: "#0c0e14", // card background
-        panel2: "#12151e", // raised card background
-        line: "rgba(255,255,255,0.09)", // hairline borders
-        acid: "#c8ff3d", // primary accent — electric lime
-        aciddim: "#9fd41f",
-        iris: "#8b7cff", // secondary accent — violet
-        ember: "#ff6b4a", // warm accent / errors
-        cyanx: "#4de3ff", // tertiary accent
-        mist: "#98a2b8", // muted text
-        paper: "#f2f5fa", // primary text
+        ink: "#f7f9fc", // page background
+        panel: "#ffffff", // card background
+        panel2: "#f1f5f9", // raised card background
+        line: "#e2e8f0", // hairline borders
+        acid: "#2563eb", // primary accent — electric lime
+        aciddim: "#1d4ed8",
+        iris: "#3b82f6", // secondary accent — violet
+        ember: "#ef4444", // warm accent / errors
+        cyanx: "#60a5fa", // tertiary accent
+        mist: "#64748b", // muted text
+        paper: "#0f172a", // primary text
       },
       fontFamily: {
         display: ["var(--font-display)", "ui-sans-serif", "system-ui", "sans-serif"],
@@ -24,8 +24,8 @@ const config: Config = {
         mono: ["ui-monospace", "SFMono-Regular", "Menlo", "monospace"],
       },
       boxShadow: {
-        deck: "0 24px 80px -24px rgb(0 0 0 / 0.7)",
-        glow: "0 0 0 1px rgb(200 255 61 / 0.25), 0 8px 40px -8px rgb(200 255 61 / 0.35)",
+        deck: "0 24px 80px -24px rgb(15 23 42 / 0.15)",
+        glow: "0 0 0 1px rgb(37 99 235 / 0.25), 0 8px 40px -8px rgb(37 99 235 / 0.35)",
       },
     },
   },
