@@ -24,7 +24,7 @@ import {
   UserStats,
 } from "./types";
 
-export const API_URL = process.env.NEXT_PUBLIC_API_URL ?? "http://localhost:8000";
+export const API_URL = process.env.NEXT_PUBLIC_API_URL ?? "/api";
 
 interface ErrorPayload {
   error?: { code?: string; message?: string; details?: Record<string, unknown> };
