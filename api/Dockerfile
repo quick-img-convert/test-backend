@@ -7,16 +7,16 @@ ENV PYTHONDONTWRITEBYTECODE=1 \
 
 # System deps: FFmpeg, libvips, libheif, LibRaw, Ghostscript, fonts.
 RUN apt-get update && apt-get install -y --no-install-recommends \
-        ffmpeg \
-        libvips-tools \
-        libvips-dev \
-        libheif-dev \
-        libraw-dev \
-        ghostscript \
-        fonts-dejavu-core \
-        curl \
-        ca-certificates \
-        gcc \
+    ffmpeg \
+    libvips-tools \
+    libvips-dev \
+    libheif-dev \
+    libraw-dev \
+    ghostscript \
+    fonts-dejavu-core \
+    curl \
+    ca-certificates \
+    gcc \
     && rm -rf /var/lib/apt/lists/*
 
 # resvg (SVG render) + vtracer (raster->SVG) prebuilt binaries.
@@ -49,10 +49,11 @@ COPY seed ./seed
 RUN useradd -m -u 10001 app \
     && mkdir -p /data/uploads /data/jobs /data/samples \
     && chown -R app:app /data /code
+COPY entrypoint.sh /entrypoint.sh
+RUN chmod +x /entrypoint.sh
 USER app
 
 EXPOSE 8000
 
-COPY entrypoint.sh /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
 CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000", "--workers", "1"]
